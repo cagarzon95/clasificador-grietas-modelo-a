@@ -110,7 +110,7 @@ with st.sidebar:
     st.subheader("Control de uso")
     st.write(f"Consultas disponibles en esta sesión: **{remaining_quota()}**")
     st.caption("Este límite es por sesión y no constituye una cuota global de Azure.")
-    if st.button("Cerrar sesión"):
+    if setting("DEMO_PASSWORD") and st.button("Cerrar sesión"):
         st.session_state.clear()
         st.rerun()
 
