@@ -30,6 +30,11 @@ pequeños y permite descargar resultados CSV.
 El modelo fue entrenado con HairWidthCracks (hormigón). No es un sistema certificado
 de inspección y sus puntuaciones no son probabilidades calibradas.
 
+HairWidthCracks es un dataset de Fraunhofer ITWM (DOI
+`10.24406/fordatis/381`). Su nombre se menciona exclusivamente para atribuir la
+procedencia de los datos de entrenamiento; este repositorio y esta aplicación son
+un ejercicio académico independiente y no están afiliados a Fraunhofer ITWM.
+
 El límite de entrada es 4 MiB por imagen porque ese es el máximo vigente para
 predicciones de Custom Vision v3.1. Las imágenes HairWidthCracks de 224×224 son
 admitidas y el servicio las reescala. Referencia oficial:
