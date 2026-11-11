@@ -14,11 +14,12 @@ pequeños y permite descargar resultados CSV.
 ## Seguridad
 
 - No se almacenan imágenes ni se registran claves.
-- La contraseña de demostración y las credenciales Azure viven exclusivamente en
-  secretos de Streamlit o variables de entorno.
+- Las credenciales Azure viven exclusivamente en secretos de Streamlit o variables
+  de entorno. `DEMO_PASSWORD` es opcional: si se omite, el acceso es público.
 - Máximo 20 imágenes por lote y 25 intentos por sesión por defecto.
-- El acceso debe mantenerse privado/restringido; el límite por sesión no sustituye
-  una cuota global distribuida.
+- Para revisión académica pública se mantienen límites por lote y sesión, pero estos
+  no sustituyen una cuota global distribuida. Conviene restringir o retirar la app
+  después del periodo de evaluación.
 
 ## Modelo
 

@@ -29,8 +29,7 @@ def setting(name: str, default=None):
 def authenticate() -> None:
     expected = str(setting("DEMO_PASSWORD", ""))
     if not expected:
-        st.error("La aplicación no tiene configurada la contraseña de demostración.")
-        st.stop()
+        return
     if st.session_state.get("authenticated"):
         return
     st.title("Acceso restringido")
@@ -110,7 +109,7 @@ st.caption("Modelo A · Azure Custom Vision · clasificación binaria")
 with st.sidebar:
     st.subheader("Control de uso")
     st.write(f"Consultas disponibles en esta sesión: **{remaining_quota()}**")
-    st.caption("Este límite es por sesión; el acceso restringido es el control principal.")
+    st.caption("Este límite es por sesión y no constituye una cuota global de Azure.")
     if st.button("Cerrar sesión"):
         st.session_state.clear()
         st.rerun()
